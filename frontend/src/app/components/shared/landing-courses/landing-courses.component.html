@@ -1,0 +1,15 @@
+
+<div class="search-bar">
+    <h1>Finding course made easy</h1>
+    <p>Search. Explore. Learn</p>
+    <input type="text" placeholder="Search">
+</div>
+<section class="featured-courses">
+  <h2>Featured Courses</h2>
+  <div class="courses">
+    <div class="course" [routerLink]="['/course']" routerLinkActive="router-link-active"  *ngFor="let course of courses">
+      <img [src]="course.image" alt="Course Image" />
+      <h3>{{ course.title }}</h3>
+      <p>{{ course.instructor }}</p>
+    </div>
+</div>

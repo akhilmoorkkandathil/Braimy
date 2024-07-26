@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="row">
+     <!-- Sidebar -->
+<nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar">
+    <div class="position-sticky">
+      <ul class="nav flex-column">
+        <h3>Course Content</h3>
+        <li class="nav-item">
+          <a class="nav-link" (click)="toggleSubtopics('gettingStarted')">
+            Getting Started
+          </a>
+          <ul *ngIf="openSubtopics.gettingStarted" class="nav flex-column ms-3">
+            <li class="nav-item">
+              <a class="nav-link">Welcome to the course</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Basics of subjects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Why learning important</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="toggleSubtopics('reactBasics')">
+            Working with Components
+          </a>
+          <ul *ngIf="openSubtopics.reactBasics" class="nav flex-column ms-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Working with events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rendering listings</a>
+            </li>
+          </ul>
+        </li>
+        
+        <!-- Add more topics and subtopics as needed -->
+      </ul>
+    </div>
+  </nav>
+  
+  
+      <!-- Main content -->
+      <main class="col-md-9 ms-sm-auto col-lg-9 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Welcome to the course</h1>
+        </div>
+        <div class="content">
+          <img src="https://images.shiksha.com/mediadata/ugcDocuments/images/wordpressImages/2022_08_MicrosoftTeams-image-13-2-1.jpg" class="img-fluid" alt="Introductory Course">
+          <h2 class="mt-3">Welcome to the course</h2>
+          <p>Hi! I am Thomas Wayne, your React.js instructor for this course. Let me tell you this, I am super happy to help you understand the core basics and advance topics of React.</p>
+          <p>In this course, we will cover basic as well as advance topics, a full-one guide, that will help you understand React in-depth. This will be a 4-hour course divided in 8 chapters and 36 lessons that includes articles, video lessons as well as assignments to help you test yourself.</p>
+          <p>Let's start now without getting any further late. Let's dive in.</p>
+        </div>
+      </main>
+    </div>
+  </div>

@@ -1,0 +1,70 @@
+<div class="course-form-container">    
+    <h2>{{title}}</h2>
+    
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="form-column">
+          <mat-form-field >
+            <mat-label>Student Name</mat-label>
+            <input matInput formControlName="studentName">
+          </mat-form-field>
+          
+          <mat-form-field >
+            <mat-label>Phone</mat-label>
+            <input matInput formControlName="phone">
+          </mat-form-field>
+          <mat-form-field >
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Assign Tutor</mat-label>
+            <mat-select formControlName="tutor">
+              @for (tutor of tutors; track tutor) {
+                <mat-option [value]="tutor._id">{{tutor.username}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="form-column">
+          <mat-form-field >
+            <mat-label>Class</mat-label>
+            <input matInput formControlName="studentClass">
+          </mat-form-field>
+          
+          <mat-form-field >
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Assign Coordinator</mat-label>
+            <mat-select formControlName="coordinator">
+              @for (coordinator of coordinators; track coordinator) {
+                <mat-option [value]="coordinator._id">{{coordinator.name}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Assign Course</mat-label>
+            <mat-select formControlName="course">
+              @for (course of courses; track course) {
+                <mat-option [value]="course._id">{{course.courseName}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="form-column">
+        <div class="image-upload">
+            <label for="file-input">
+              <mat-icon>cloud_upload</mat-icon>
+              <span>Click to upload</span>
+            </label>
+            <input id="file-input" type="file" (change)="onFileSelected($event)" accept="image/*">
+          </div>
+      </div>
+       <button mat-raised-button color="primary" type="submit">{{button}}</button>
+    </form>
+</div>

@@ -1,0 +1,26 @@
+.sidebar {
+    padding: 30px;
+    background-color: #e9efff;
+  }
+  
+  .nav-item > .nav-link {
+    cursor: pointer;
+  }
+  
+  .nav-item ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  .nav-item ul .nav-item {
+    padding-left: 10px;
+
+  }
+  
+  .ms-3 {
+    margin-left: 1rem;
+  }
+  .nav h3{
+    color: #007bff;
+    font-weight: bolder;
+  }
