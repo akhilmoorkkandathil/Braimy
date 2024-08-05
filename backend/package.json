@@ -4,6 +4,7 @@
   "description": "eLearning Application",
   "main": "app.js",
   "dependencies": {
+    "@google/generative-ai": "^0.16.0",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "cloudinary": "^2.2.0",
@@ -27,5 +28,14 @@
     "start": "nodemon app.js"
   },
   "author": "Akhil M",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.8.0",
+    "eslint": "^9.8.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
+    "globals": "^15.8.0"
+  }
 }

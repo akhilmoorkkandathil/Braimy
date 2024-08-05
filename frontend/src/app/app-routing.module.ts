@@ -34,8 +34,6 @@ import { CoordinatorClassesComponent } from './components/coordinator/coordinato
 import { CoordinatorNotificationsComponent } from './components/coordinator/coordinator-notifications/coordinator-notifications.component';
 import { UserCoursesComponent } from './components/user/user-courses/user-courses.component';
 import { UserNotificationComponent } from './components/user/user-notification/user-notification.component';
-import { UserChatComponent } from './components/user/user-chat/user-chat.component';
-import { UserSmaltLearnMentorComponent } from './components/user/user-smalt-learn-mentor/user-smalt-learn-mentor.component';
 import { AdminAddCourseComponent } from './components/admin/admin-add-course/admin-add-course.component';
 import { AdminAddPaymentComponent } from './components/admin/admin-add-payment/admin-add-payment.component';
 import { AdminAddExpenseComponent } from './components/admin/admin-add-expense/admin-add-expense.component';
@@ -44,6 +42,8 @@ import { AdminAddTutorComponent } from './components/admin/admin-add-tutor/admin
 import { AdminAddCoordinatorComponent } from './components/admin/admin-add-coordinator/admin-add-coordinator.component';
 import { CoordinatorStuedentsComponent } from './components/coordinator/coordinator-stuedents/coordinator-stuedents.component';
 import { ManageStudentComponent } from './components/coordinator/manage-student/manage-student.component';
+import { SmartLearnMentorComponent } from './components/user/smart-learn-mentor/smart-learn-mentor.component';
+import { UserChatComponent } from './components/user/user-chat/user-chat.component';
 
 
 
@@ -122,9 +122,9 @@ const routes: Routes = [
     children: [
       { path: "dashboard", component: UserDashboardComponent },
       { path: "courses", component: UserCoursesComponent },
-      { path: "chat", component: UserChatComponent },
       { path: "notification", component: UserNotificationComponent },
-      { path: "mentor", component: UserSmaltLearnMentorComponent },
+      { path: "mentor", component: SmartLearnMentorComponent },
+      { path: "chat", component: UserChatComponent },
 
     ]
   },

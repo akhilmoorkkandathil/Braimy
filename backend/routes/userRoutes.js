@@ -21,6 +21,7 @@ userRouter.get('/getStudent/:id',userController.getStudent);
 userRouter.post('/updateStudent/:id',checkCoordinatorBlockStatus,userController.updateStudent);
 userRouter.post('/subscribe',userController.subscribe);
 userRouter.get('/blockStatus',userController.blockStatus);
-userRouter.get('/getStudentClasses',userController.getStudentClasses)
+userRouter.get('/getStudentClasses',userController.getStudentClasses);
+userRouter.post('gemini',userController.geminiResult)
 
 module.exports = userRouter;

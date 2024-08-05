@@ -9,9 +9,9 @@ const paymentModel  = require('../models/paymentModel');
 const expenceModel = require('../models/expenseSchema');
 const studentModel = require('../models/userModel');
 const tutorModel = require('../models/tutorModel');
-const classModel = require('../models/completedClassModel');
 const CompletedClassModel = require('../models/completedClassModel');
 
+const name = "akdlhjsf";
 const cloudinary = require('cloudinary').v2;
 //s3 bucket -presigned url
 require('dotenv').config();

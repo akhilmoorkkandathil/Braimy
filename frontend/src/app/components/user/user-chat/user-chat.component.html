@@ -1,1 +1,12 @@
-<p>user-chat works!</p>
+<div class="d-flex">
+  <app-user-chat-sidebar
+    (conversationClicked)="onConversationSelected($event)"
+  ></app-user-chat-sidebar>
+  <div id="chat">
+  </div>
+  <app-user-chat-body [conversation]="conversation" *ngIf="conversation"></app-user-chat-body>
+</div>
+
+
+
+

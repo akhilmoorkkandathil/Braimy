@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     height: 80%;
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -14,14 +14,13 @@
     flex: 1;
     overflow-y: auto;
     padding: 10px;
-    max-height: 100%;
   }
   
   .student-message {
     text-align: right;
   }
   
-  .tutor-message {
+  .mentor-message {
     text-align: left;
   }
   
@@ -38,7 +37,7 @@
     color: #000;
   }
   
-  .tutor-message .message-content {
+  .mentor-message .message-content {
     background-color: #e0e0e0;
     color: #000;
   }

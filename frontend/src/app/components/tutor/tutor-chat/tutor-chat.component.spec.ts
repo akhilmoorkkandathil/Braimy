@@ -8,10 +8,10 @@ describe('TutorChatComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TutorChatComponent]
+      imports: [TutorChatComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(TutorChatComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

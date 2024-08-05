@@ -25,6 +25,8 @@
     "@angular/router": "^17.3.0",
     "@angular/service-worker": "^17.3.11",
     "@angular/ssr": "^18.0.4",
+    "@ctrl/ngx-emoji-mart": "^9.2.0",
+    "@google/generative-ai": "^0.16.0",
     "@popperjs/core": "^2.11.8",
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.2",
@@ -38,6 +40,7 @@
     "primeicons": "^7.0.0",
     "primeng": "^17.18.1",
     "rxjs": "~7.8.0",
+    "socket.io-client": "^4.7.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },

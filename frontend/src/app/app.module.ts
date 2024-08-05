@@ -73,8 +73,6 @@ import { TutorNotificationsComponent } from './components/tutor/tutor-notificati
 import { CoordinatorClassesComponent } from './components/coordinator/coordinator-classes/coordinator-classes.component';
 import { CoordinatorNotificationsComponent } from './components/coordinator/coordinator-notifications/coordinator-notifications.component';
 import { UserNotificationComponent } from './components/user/user-notification/user-notification.component';
-import { UserChatComponent } from './components/user/user-chat/user-chat.component';
-import { UserSmaltLearnMentorComponent } from './components/user/user-smalt-learn-mentor/user-smalt-learn-mentor.component';
 import { AdminAddCourseComponent } from './components/admin/admin-add-course/admin-add-course.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRippleModule } from '@angular/material/core';
@@ -90,6 +88,9 @@ import { CoordinatorStuedentsComponent } from './components/coordinator/coordina
 import { ManageStudentComponent } from './components/coordinator/manage-student/manage-student.component';
 import { NgxMatTimepickerModule } from 'ngx-mat-timepicker';
 import { ConfirmDialogueComponent } from './components/shared/confirm-dialogue/confirm-dialogue.component';
+import { SmartLearnMentorComponent } from './components/user/smart-learn-mentor/smart-learn-mentor.component';
+import { UserChatSidebarComponent } from './components/user/user-chat-sidebar/user-chat-sidebar.component';
+import { UserChatBodyComponent } from './components/user/user-chat-body/user-chat-body.component';
 
 
 
@@ -138,13 +139,10 @@ import { ConfirmDialogueComponent } from './components/shared/confirm-dialogue/c
     AdminExpenseListComponent,
     TutorClassesComponent,
     TutorCoursesComponent,
-    TutorChatComponent,
     TutorNotificationsComponent,
     CoordinatorClassesComponent,
     CoordinatorNotificationsComponent,
     UserNotificationComponent,
-    UserChatComponent,
-    UserSmaltLearnMentorComponent,
     AdminAddCourseComponent,
     AdminAddPaymentComponent,
     AdminAddExpenseComponent,
@@ -185,6 +183,9 @@ import { ConfirmDialogueComponent } from './components/shared/confirm-dialogue/c
     MatMenuModule,
     MatSelectModule,
     NgxMatTimepickerModule,
+    SmartLearnMentorComponent,
+    UserChatSidebarComponent,
+    UserChatBodyComponent,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable

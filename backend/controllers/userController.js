@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 
 const userModel = require('../models/userModel');
 const userOtpModel = require('../models/userOtpModel');
@@ -7,7 +9,8 @@ const {CreateError} = require('../utils/error');
 const {sendVerifyMail} = require('../utils/sendVerifyMail');
 const jwt = require('jsonwebtoken');
 const moment = require('moment');
-const studentModel = require('../models/userModel')
+const studentModel = require('../models/userModel');
+const model = require('../utils/gemini')
 
 
 module.exports = {
@@ -142,8 +145,9 @@ module.exports = {
                 return next(CreateError(403, "OTP doesn't match"))
             }
         }
-        catch(err)
+        catch(e)
         {    
+            console.log(e);
             let errorMessage = "An error occurred while verifying the email."
             return next(CreateError(406, errorMessage));
         }
@@ -257,7 +261,7 @@ module.exports = {
                 status:student.isBlocked
               }));
             return next(CreateSuccess(200, 'Fetched students successfully', formattedStudents, null));
-        } catch (error) {
+        } catch (e) {
             return next(CreateError(500,"Something went wrong while fetching users"));
         }
     },
@@ -434,6 +438,7 @@ module.exports = {
                 try {
                     return JSON.parse(Buffer.from(token.split('.')[1], 'base64').toString());
                 } catch (e) {
+                    console.log(e);
                     throw new Error('Invalid token');
                 }
             }
@@ -453,13 +458,19 @@ module.exports = {
             console.log(students);
         const todayClasses = students.filter(student => student.selectedDays.includes(today)).slice(0,4);
         
-        // console.log(todayClasses);
         return next(CreateSuccess(200, "Fetched classes successfully", todayClasses));
             
         } catch (error) {
             console.error('Error fetching upcoming classes:', error);
             return next(CreateError(500, "Error fetching upcoming classes"));
         }
+    },
+    geminiResult:async(req,res,next)=>{
+        let prompt = req.body.prompt;
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        console.log(response.text());
+        return next(CreateSuccess(200, "data created"));
     }
 
 
